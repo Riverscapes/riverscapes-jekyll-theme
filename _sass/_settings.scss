@@ -871,7 +871,7 @@ $xy-block-grid-max: 8;
 
 
 // NOW we say which bits of Foundation we want to load
-@import '../node_modules/foundation-sites/scss/foundation';
+@import 'foundation-sites/scss/foundation';
 // @import 'motion-ui';
 
 @include foundation-global-styles;

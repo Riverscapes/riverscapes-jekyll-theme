@@ -9,6 +9,7 @@ url: https://riverscapes.github.io
 # baseurl: "/TemplateDocs"
 # When serving locally what port should we use:
 port: 4001
+# google_analytics: UA-XXXXXXXXXXX-X
 
 # Markdown style
 markdown: kramdown
