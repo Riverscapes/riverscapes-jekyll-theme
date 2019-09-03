@@ -11,51 +11,14 @@ For overall [Riverscapes Documentation](http://riverscapes.northarrowresearch.co
 
 ### Site templates and HTML
 
-* The default template that controls the large-scale page layout is:  `src/_layouts/default.html`. There can be more than one but we like to keep it simple
-* The footer, sidenav and navigation stuff is in `src/_includes`. We build a lot of stuff using javascript so `src/_includes/navigation.html` is going to not be very useful.
+* The default template that controls the large-scale page layout is:  `_layouts/default.html`. There can be more than one but we like to keep it simple
+* The footer, sidenav and navigation stuff is in `_includes`. We build a lot of stuff using javascript so `_includes/navigation.html` is going to not be very useful.
 
 ### Editing CSS:
 
 * `/assets/css/custom.css` for custom hackery and small changes
-* `/src/scss/app.scss` for site-wide changes. These must be compiled using sass (and grunt)
+* `_sass/app.scss` for site-wide changes. These must be compiled using sass (and grunt)
 
-### Editing Javascript
-
-Javascript is compiled using grunt. Find the source in the `src/js` folder
-
-## Recompiling SASS and JS
-
-The following files are compiled and should not be tampered with:
-
-* `assets/css/app.css`
-* `assets/css/app.css.map`
-* `assets/js/dist.js`
-* `assets/fonts/*`
-
-to compile them simply run `grunt` in the `src/` folder
-
-## Creating a new site:
-
-Copy the following files to your docs folder:
-
-* `/assets/` This contains all your JS and css
-* `/src/` (_layouts and _includes are mandatory. Everything else is optional)
-* `_config.yaml` Your site settings go here
-* `.gitignore` This will make sure you don't add files you shouldn't to your git repo
-* `index.md` (optional)
-
-## Updating your theme
-
-Sometimes we may make changes to the theme. These could be cosmetic or functional. If you've customized your CSS or Javascript then you are repsonsible for merging changes yourself. These instructions only apply to a fresh site or one where the CSS, Javascript and Jekyll tempaltes haven't been customized. 
-
-Copy the following files from this repo into your repo/docs folder
-
-* `assets/css/app.css`
-* `assets/css/app.css.map`
-* `assets/js/dist.js`
-* `assets/fonts/*`
-* `src/_includes`
-* `src/_layouts/default.html`
 
 
 ## Updating your favicon

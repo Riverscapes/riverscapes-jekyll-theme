@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
 
 # Final root url of the site. No ending slash. No subdirectory
 url: https://riverscapes.github.io
-# If the site is in a subdirectory you should do it like this: "/subdirectory". Otherwise ""
+# If the site is in a subdirectory url you should do it like this: "/subdirectory". Otherwise ""
 # baseurl: "/TemplateDocs"
 # When serving locally what port should we use:
 port: 4001
@@ -36,6 +36,7 @@ exclude:
   - script
   - js
   - TEMPLATE
+  - Gemfile*
 
 
 # These are theme settings that will be used to turn features on and off
@@ -85,3 +86,9 @@ AppRedirects:
     url: ThingsA
   - key: KEY2
     url: ThingsB/subpageB.html
+
+# Here is how we retrieve the remote theme. Changes to this remote theme will show up after you 
+# push the repo with your /docs folder
+remote_theme: Riverscapes/riverscapes-jekyll-theme
+plugins:
+  - jekyll-remote-theme
