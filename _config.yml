@@ -1,22 +1,17 @@
 # Site title will be used everywhere
+# DON'T USE THIS YML FILE IN YOUR SITE. IT'S FOR TESTING ONLY
 title: SITE TITLE HERE
 description: > # this means to ignore newlines until "baseurl:"
   Online help and documentation site for the site
 
-# Final root url of the site. No ending slash. No subdirectory
-url: https://riverscapes.github.io
-# If the site is in a subdirectory you should do it like this: "/subdirectory". Otherwise ""
-# baseurl: "/TemplateDocs"
-# When serving locally what port should we use:
-port: 4001
-# google_analytics: UA-XXXXXXXXXXX-X
+port: 4002
+google_analytics: UA-XXXXXXXXXXX-X
 
 # Markdown style
 markdown: kramdown
 # Syntax highlighter.
 highlighter: rouge
 
-# Choosing "default" layout means we don't need a "layout:default" in all our 
 # front matter
 defaults:
   -
@@ -36,6 +31,7 @@ exclude:
   - script
   - js
   - TEMPLATE
+  - docs
 
 
 # These are theme settings that will be used to turn features on and off
