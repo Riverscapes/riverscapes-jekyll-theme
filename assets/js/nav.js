@@ -36,5 +36,3 @@ var APPREDIRECTS = {
 
 
 {% endcapture %}{{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}
-
-{{content}}
