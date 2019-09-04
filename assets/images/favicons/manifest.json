@@ -1,5 +1,9 @@
+---
+comment: put some frontmatter here to allow the site name to work
+layout:
+---
 {
- "name": "App",
+ "name": "{{ site.title }}",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

@@ -15,7 +15,7 @@
 			</div>	
 	</div>
 </div>
-<div id="sidenav">
+ <div id="sidenav">
 	{% capture html %}
 
 	{% assign entries = site.pages | sort: "path" %}
@@ -29,3 +29,6 @@
 
 	{% endcapture %}{{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}
 </div>
+
+<!-- Sidebar is where the extended sidepanel stuff like mailchimp forms go -->
+{% include sidebar.html %}
