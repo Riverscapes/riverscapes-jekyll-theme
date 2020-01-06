@@ -24,7 +24,7 @@ $(document).ready(function (){
 			// Now loop until we're deep enough
 			while (urlArr.length > 1) {
 				var key = urlArr[0].length == 0 ? "EMPTY" : urlArr[0];
-				key = key.replace("_"," ").replace("%20", " ");
+				key = key.replace(/_/g," ");
 				var newDir = null;
 
 				var thebranch = pointer.branches.filter(function(br){

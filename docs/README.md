@@ -6,6 +6,10 @@ For overall [Riverscapes Documentation](http://riverscapes.northarrowresearch.co
 * [Cheatsheets on Jekyll Toolbox Documentation](http://riverscapes.northarrowresearch.com/Technical_Reference/jekyll_toolbox.html)- this is how you get the page titles (`title: Page Title`) to work, the proper behavior in the site table of contents, and a whole host of other issues.
 * [Theming a Jekyll Site](http://riverscapes.northarrowresearch.com/Technical_Reference/applying_theme.html) - This is how to apply the Riverscapes theme to your site.
 
+### Misc problems
+
+* if you see '%20' in your sidebar it's because you used spaces in your folder names. Switch to underscores
+
 ### Site templates and HTML
 
 * The default template that controls the large-scale page layout is:  `_layouts/default.html`. There can be more than one but we like to keep it simple
