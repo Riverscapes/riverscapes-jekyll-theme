@@ -18,5 +18,6 @@ cp -fr node_modules/font-awesome/fonts assets/fonts
 
 # We only need a few JS files
 cp node_modules/foundation-sites/dist/js/foundation.min.js assets/js/foundation.min.js
+cp node_modules/foundation-sites/dist/js/foundation.min.js.map assets/js/foundation.min.js.map
 cp node_modules/motion-ui/dist/motion-ui.min.js assets/js/motion-ui.min.js
 cp node_modules/jquery/dist/jquery.min.* assets/js/

@@ -1,4 +1,3 @@
-// First, here are all the settings we have access to:
 //  Foundation for Sites Settings
 //  -----------------------------
 //
@@ -61,6 +60,7 @@
 //  55. Top Bar
 //  56. Xy Grid
 
+
 @import 'foundation-sites/scss/util/util';
 
 // 1. Global
@@ -99,6 +99,7 @@ $global-prototype-breakpoints: false;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
+$print-hrefs: true;
 
 @include add-foundation-colors;
 
@@ -111,6 +112,13 @@ $breakpoints: (
   large: 640px,
   xlarge: 1200px,
   xxlarge: 1440px,
+);
+$breakpoints-hidpi: (
+  hidpi-1: 1,
+  hidpi-1-5: 1.5,
+  hidpi-2: 2,
+  retina: 2,
+  hidpi-3: 3
 );
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large);
@@ -162,12 +170,7 @@ $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
-$code-color: $black;
-$code-font-family: $font-family-monospace;
-$code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
-$code-padding: rem-calc(2 5 1);
+$enable-code-inline: true;
 $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
@@ -187,15 +190,22 @@ $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: $dark-gray;
 $blockquote-padding: rem-calc(9 20 0 19);
 $blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
-$cite-pseudo-content: '\2014 \0020';
+$enable-cite-block: true;
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
 $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
+$cite-font-size: rem-calc(13);
+$cite-color: $dark-gray;
+$cite-pseudo-content: '\2014 \0020';
+$code-color: $black;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $global-weight-normal;
+$code-background: $light-gray;
+$code-border: 1px solid $medium-gray;
+$code-padding: rem-calc(2 5 1);
 
 // 5. Typography Helpers
 // ---------------------
@@ -208,6 +218,17 @@ $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;
 $stat-font-size: 2.5rem;
+$cite-color: $dark-gray;
+$cite-font-size: rem-calc(13);
+$cite-pseudo-content: '\2014 \0020';
+$code-color: $black;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $global-weight-normal;
+$code-background: $light-gray;
+$code-border: 1px solid $medium-gray;
+$code-padding: rem-calc(2 5 1);
+$code-block-padding: 1rem;
+$code-block-margin-bottom: 1.5rem;
 
 // 6. Abide
 // --------
@@ -225,6 +246,8 @@ $input-error-font-weight: $global-weight-bold;
 
 $accordion-background: $white;
 $accordion-plusminus: true;
+$accordion-plus-content: '\002B';
+$accordion-minus-content: '\2013';
 $accordion-title-font-size: rem-calc(12);
 $accordion-item-color: $primary-color;
 $accordion-item-background-hover: $light-gray;
@@ -280,6 +303,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
+$button-font-weight: null;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
@@ -288,6 +312,7 @@ $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
+$button-border: 1px solid transparent;
 $button-hollow-border-width: 1px;
 $button-sizes: (
   tiny: 0.3rem,
@@ -300,6 +325,7 @@ $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+$button-responsive-expanded: false;
 
 // 12. Button Group
 // ----------------
@@ -317,7 +343,11 @@ $callout-background: $white;
 $callout-background-fade: 85%;
 $callout-border: 1px solid rgba($black, 0.25);
 $callout-margin: 0 0 1rem 0;
-$callout-padding: 1rem;
+$callout-sizes: (
+  small: 0.5rem,
+  default: 1rem,
+  large: 3rem,
+);
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
@@ -339,6 +369,8 @@ $card-margin-bottom: $global-margin;
 // ----------------
 
 $closebutton-position: right top;
+$closebutton-z-index: 10;
+$closebutton-default-size: medium;
 $closebutton-offset-horizontal: (
   small: 0.66rem,
   medium: 1rem,
@@ -391,7 +423,7 @@ $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: $white;
+$dropdownmenu-background: transparent;
 $dropdownmenu-submenu-background: $dropdownmenu-background;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
@@ -474,9 +506,9 @@ $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
+$menu-item-color-alt-active: $black;
 $menu-item-background-active: transparent; //get-color(primary);
 $menu-icon-spacing: 0.25rem;
-$menu-item-background-hover: $light-gray;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
 $menu-icons-back-compat: true;
@@ -546,6 +578,8 @@ $pagination-ellipsis-color: $black;
 $pagination-mobile-items: false;
 $pagination-mobile-current-item: false;
 $pagination-arrows: true;
+$pagination-arrow-previous: '\00AB';
+$pagination-arrow-next: '\00BB';
 
 // 28. Progress Bar
 // ----------------
@@ -767,6 +801,8 @@ $switch-paddle-background: $white;
 $switch-paddle-offset: 0.25rem;
 $switch-paddle-radius: $global-radius;
 $switch-paddle-transition: all 0.25s ease-out;
+$switch-opacity-disabled: .5;
+$switch-cursor-disabled: not-allowed;
 
 // 50. Table
 // ---------
@@ -801,7 +837,6 @@ $tab-active-color: $primary-color;
 $tab-item-font-size: rem-calc(12);
 $tab-item-background-hover: $white;
 $tab-item-padding: 1.25rem 1.5rem;
-$tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: $body-font-color;
@@ -810,7 +845,7 @@ $tab-content-padding: 1rem;
 // 52. Thumbnail
 // -------------
 
-$thumbnail-border: solid 4px $white;
+$thumbnail-border: 4px solid $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
@@ -867,7 +902,6 @@ $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;
-
 
 
 // NOW we say which bits of Foundation we want to load
