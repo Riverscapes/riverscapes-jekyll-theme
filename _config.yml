@@ -45,24 +45,27 @@ settings:
   sideMenu:
     homeItem: true
     startExpanded: false
-  # Arbitrary multi-level topbar menu
-  # IF you don't need this just comment out everything below
-  # ----------------------------------
-  topmenu:
-    - title: "Riverscapes"
-      childern:
-        - title: "Home"
-          url: http://riverscapes.xyz
-        - title: "Who We Are"
-          url: http://riverscapes.xyz/consortium.html
-    - title: "Tools"
-      url: http://riverscapes.xyz/Tools
-    - title: "Science"
-      url: http://riverscapes.xyz/science.html
-    - title: "Data Warehouse"
-      url: http://riverscapes.xyz/Data_Warehouses
-    - title: "Support"
-      url: http://riverscapes.xyz/support.html
+
+# Multi-level topbar menu
+# IF you don't need this just comment out everything below
+# ----------------------------------
+topmenu:
+  - title: "test"
+    url: "http://google.com"
+  - title: "Riverscapes"
+    childern:
+      - title: "Home"
+        url: http://riverscapes.xyz
+      - title: "Who We Are"
+        url: http://riverscapes.xyz/consortium.html
+  - title: "Tools"
+    url: http://riverscapes.xyz/Tools
+  - title: "Science"
+    url: http://riverscapes.xyz/science.html
+  - title: "Data Warehouse"
+    url: http://riverscapes.xyz/Data_Warehouses
+  - title: "Support"
+    url: http://riverscapes.xyz/support.html
 
 # Redirecting from apps can be tricky so we use a key-value system
 # key: must be in the set [A-Za-z0-9_] (no spaces, no dashes)
