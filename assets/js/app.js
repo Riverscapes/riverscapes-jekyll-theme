@@ -95,7 +95,7 @@ $(document).ready(function (){
 	}	
 
 	/**
-	 * Turn a tree structure from TopMenu into a foundation topbar
+	 * Turn a tree structure from SiteSettings.topmenu into a foundation topbar
 	 * @param  {[type]}
 	 * @return {[type]}
 	 */
@@ -103,7 +103,7 @@ $(document).ready(function (){
 		// The Mobile menu
 		$topbarContainer = $('<div></div>')
 
-		var tree = TopMenu
+		var tree = SiteSettings.topmenu
 
 		// Otherwise we get a proper menu
 		$mobilediv = $('<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium"></div>');

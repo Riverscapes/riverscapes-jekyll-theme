@@ -50,6 +50,30 @@ settings:
   sideMenu:
     homeItem: true
     startExpanded: false
+  # Arbitrary multi-level topbar menu
+  # IF you don't need this just comment out everything below
+  # ----------------------------------
+  topmenu:
+    - title: "Riverscapes"
+      childern:
+        - title: "Model Home"
+          url: index
+        - title: "Riverscapes Home"
+          url: http://riverscapes.xyz
+        - title: "About Riverscapes"
+          url: http://riverscapes.xyz/about.html
+        - title: "Who We Are"
+          url: http://riverscapes.xyz/who-we-are.html
+        - title: "News"
+          url: http://riverscapes.xyz/news.html
+    - title: "RC Tools"
+      url: http://riverscapes.xyz/rc-tools.html
+    - title: "RC Science"
+      url: http://riverscapes.xyz/rc-science.html
+    - title: "RC Data"
+      url: http://riverscapes.xyz/rc-data.html
+    - title: "RC Help"
+      url: http://riverscapes.xyz/rc-help.html
 
 # Redirecting from apps can be tricky so we use a key-value system
 # key: must be in the set [A-Za-z0-9_] (no spaces, no dashes)
@@ -57,11 +81,11 @@ settings:
 # 
 # The url you have to call is: http://siteurl.com/baseurl/?APPKEY=KEY1
 # ---------------------------------------------------------------
-# AppRedirects:
-#   - key: KEY1
-#     url: ThingsA
-#   - key: KEY2
-#     url: ThingsB/subpageB.html
+AppRedirects:
+  - key: KEY1
+    url: ThingsA
+  - key: KEY2
+    url: ThingsB/subpageB.html
 
 # Here is how we retrieve the remote theme. Changes to this remote theme will show up after you 
 # push the repo with your /docs folder
