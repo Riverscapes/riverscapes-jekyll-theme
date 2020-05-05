@@ -11,3 +11,11 @@ This is the main template for `/docs` folders in Riverscapes. Think of it as the
 ## How do I (Other)
 
 See Jekyll docs regarding Gem themes.
+
+
+
+## Upgrading Jekyll
+
+1. Change the Gemfile to the new version
+2. Run `bundle update`
+3. commit and push
