@@ -9,11 +9,11 @@ cp -fr node_modules/motion-ui _sass/motion-ui
 rm -fr _sass/foundation-sites
 cp -fr node_modules/foundation-sites _sass/foundation-sites
 
-rm -fr _sass/font-awesome
-cp -fr node_modules/font-awesome _sass/font-awesome
+rm -fr _sass/fontawesome-free
+cp -fr node_modules/@fortawesome/fontawesome-free _sass/fontawesome-free
 
 rm -fr assets/fonts
-cp -fr node_modules/font-awesome/fonts assets/fonts
+cp -fr node_modules/@fortawesome/fontawesome-free/webfonts assets/fonts
 
 
 # We only need a few JS files

@@ -60,7 +60,6 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-
 @import 'foundation-sites/scss/util/util';
 
 // 1. Global
@@ -70,8 +69,8 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #da8044,
-  secondary: #333333,
+  primary: #1779ba,
+  secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -83,7 +82,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'News Cycle', sans-serif;
+$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -108,8 +107,8 @@ $print-hrefs: true;
 
 $breakpoints: (
   small: 0,
-  medium: 400px,
-  large: 640px,
+  medium: 640px,
+  large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
@@ -139,8 +138,8 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Oswald', sans-serif;
-$header-font-weight: 700;
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
@@ -156,12 +155,12 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 32),
-    'h2': ('font-size': 24),
-    'h3': ('font-size': 20),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 16),
-    'h6': ('font-size': 14),
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -197,15 +196,6 @@ $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
-$cite-pseudo-content: '\2014 \0020';
-$code-color: $black;
-$code-font-family: $font-family-monospace;
-$code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
-$code-padding: rem-calc(2 5 1);
 
 // 5. Typography Helpers
 // ---------------------
@@ -315,7 +305,7 @@ $button-radius: $global-radius;
 $button-border: 1px solid transparent;
 $button-hollow-border-width: 1px;
 $button-sizes: (
-  tiny: 0.3rem,
+  tiny: 0.6rem,
   small: 0.75rem,
   default: 0.9rem,
   large: 1.25rem,
@@ -423,8 +413,8 @@ $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: transparent;
-$dropdownmenu-submenu-background: $dropdownmenu-background;
+$dropdownmenu-background: null;
+$dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
@@ -507,7 +497,7 @@ $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
 $menu-item-color-alt-active: $black;
-$menu-item-background-active: transparent; //get-color(primary);
+$menu-item-background-active: get-color(primary);
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
@@ -902,57 +892,4 @@ $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;
-
-
-// NOW we say which bits of Foundation we want to load
-@import 'foundation-sites/scss/foundation';
-// @import 'motion-ui';
-
-@include foundation-global-styles;
-@include foundation-grid;
-// @include foundation-flex-grid;
-@include foundation-typography;
-@include foundation-button;
-@include foundation-forms;
-// @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
-@include foundation-callout;
-@include foundation-card;
-@include foundation-close-button;
-@include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
-@include foundation-responsive-embed;
-@include foundation-label;
-@include foundation-media-object;
-@include foundation-off-canvas;
-@include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
-@include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
-@include foundation-switch;
-@include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
-@include foundation-title-bar;
-@include foundation-tooltip;
-@include foundation-top-bar;
-@include foundation-visibility-classes;
-@include foundation-float-classes;
-// @include foundation-flex-classes;
-
-// @include motion-ui-transitions;
-// @include motion-ui-animations;
-
-
 

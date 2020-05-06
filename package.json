@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "The riverscapes theme",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
-    "font-awesome": "4.7.0",
-    "foundation-sites": "6.6.1",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "foundation-sites": "6.6.3",
+    "motion-ui": "^2.0.2",
     "jquery": "3.4.1",
-    "motion-ui": "1.2.3",
     "what-input": "5.2.6"
   },
   "scripts": {

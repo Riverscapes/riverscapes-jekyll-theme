@@ -6,10 +6,12 @@
 
 
 // This grabs all our foundation settings
-// @import 'motion-ui/motion-ui';
-@import 'settings';
-@import 'font-awesome/scss/font-awesome';
+@import 'motion-ui/motion-ui';
+@import 'foundation';
+@import 'fontawesome-free/scss/fontawesome';
 @import 'github';
+
+@include foundation-everything;
 
 // Main sections
 body{
@@ -260,7 +262,7 @@ header {
     padding-right: 0.3rem;
   }
   li.leaf.home > a > i.icon { @extend .fa-home; }
-  li.leaf.page > a > i.icon { @extend .fa-file-text; }
+  li.leaf.page > a > i.icon { @extend .fa-file-alt; }
   li.leaf a:hover {
     text-decoration: underline;
   }
