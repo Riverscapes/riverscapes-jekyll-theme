@@ -9,7 +9,7 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "foundation-sites": "6.6.3",
     "motion-ui": "^2.0.2",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "what-input": "5.2.6"
   },
   "scripts": {
