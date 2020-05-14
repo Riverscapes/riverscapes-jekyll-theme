@@ -5,6 +5,11 @@
 @import 'math';
 
 $contrast-warnings: true !default;
+$primary-color: null;
+$secondary-color: null;
+$success-color: null;
+$warning-color: null;
+$alert-color: null;
 
 ////
 /// @group functions
