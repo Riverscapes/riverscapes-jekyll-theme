@@ -30,7 +30,6 @@ exclude:
   - src
   - LICENSE
   - README.md
-  - _config.yml
   - package.json
   - yarn.lock
   - script
