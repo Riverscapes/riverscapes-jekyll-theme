@@ -28,7 +28,11 @@ var NAVPages = [
     {% endfor %}
 ];
 var SiteSettings = {{ site.settings | jsonify }};
+
 var TopMenu = {{ site.topmenu | jsonify }};
+
+var SITE = {{ site | jsonify }};
+
 var APPREDIRECTS = {
 {% for redir in site.AppRedirects %}
     {{redir.key}}: "{{redir.url}}",

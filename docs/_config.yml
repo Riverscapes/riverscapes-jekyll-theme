@@ -58,11 +58,11 @@ settings:
 # 
 # The url you have to call is: http://siteurl.com/baseurl/?APPKEY=KEY1
 # ---------------------------------------------------------------
-AppRedirects:
-  - key: KEY1
-    url: ThingsA
-  - key: KEY2
-    url: ThingsB/subpageB.html
+# AppRedirects:
+#   - key: KEY1
+#     url: ThingsA
+#   - key: KEY2
+#     url: ThingsB/subpageB.html
 
 # Here is how we retrieve the remote theme. Changes to this remote theme will show up after you 
 # push the repo with your /docs folder
