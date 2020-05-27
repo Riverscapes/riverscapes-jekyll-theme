@@ -1,6 +1,6 @@
 ---
 title: Test
-layout: empty
+layout: blank
 comment: You need this file so we get the right navigation structure. Just leave the body empty.
 ---
 
