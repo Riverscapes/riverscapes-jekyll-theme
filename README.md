@@ -11,3 +11,5 @@ This is the main template for `/docs` folders in Riverscapes. Think of it as the
 ## How do I (Other)
 
 See Jekyll docs regarding Gem themes.
+
+## Deploying this theme
