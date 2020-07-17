@@ -56,24 +56,18 @@ settings:
   topmenu:
     - title: "Riverscapes"
       childern:
-        - title: "Model Home"
-          url: index
-        - title: "Riverscapes Home"
+        - title: "Home"
           url: http://riverscapes.xyz
-        - title: "About Riverscapes"
-          url: http://riverscapes.xyz/about.html
         - title: "Who We Are"
-          url: http://riverscapes.xyz/who-we-are.html
-        - title: "News"
-          url: http://riverscapes.xyz/news.html
-    - title: "RC Tools"
-      url: http://riverscapes.xyz/rc-tools.html
-    - title: "RC Science"
-      url: http://riverscapes.xyz/rc-science.html
-    - title: "RC Data"
-      url: http://riverscapes.xyz/rc-data.html
-    - title: "RC Help"
-      url: http://riverscapes.xyz/rc-help.html
+          url: http://riverscapes.xyz/consortium.html
+    - title: "Tools"
+      url: http://riverscapes.xyz/Tools
+    - title: "Science"
+      url: http://riverscapes.xyz/science.html
+    - title: "Data Warehouse"
+      url: http://riverscapes.xyz/Data_Warehouses
+    - title: "Support"
+      url: http://riverscapes.xyz/support.html
 
 # Redirecting from apps can be tricky so we use a key-value system
 # key: must be in the set [A-Za-z0-9_] (no spaces, no dashes)
@@ -89,6 +83,6 @@ AppRedirects:
 
 # Here is how we retrieve the remote theme. Changes to this remote theme will show up after you 
 # push the repo with your /docs folder
-remote_theme: Riverscapes/riverscapes-jekyll-theme
+remote_theme: Riverscapes/riverscapes-jekyll-theme@dev
 plugins:
   - jekyll-remote-theme
