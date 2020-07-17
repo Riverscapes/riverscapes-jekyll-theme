@@ -192,14 +192,14 @@ function getUrlParameter(name) {
 			// If we've elected to have a home item then use it
 			try {
 				if (SiteSettings.sideMenu.homeItem === true){
-					$li = $('<li class="leaf home"><a href="' + NAVHome + '/"><i class="icon"/>Home</a></li>');
+					$li = $('<li class="leaf home"><a href="' + NAVHome + '/"><i class="icon"></i>Home</a></li>');
 					$mUL.append($li);
 				}
 			} catch (error) {}
 		}
 		// Now go find more branches to sort their leaves
 		for (lf in t.leaves) {
-			$li = $('<li class="leaf page"><a href="' + t.leaves[lf].absurl + '"><i class="icon"/>' + t.leaves[lf].title + '</a></li>');
+			$li = $('<li class="leaf page"><a href="' + t.leaves[lf].absurl + '"><i class="icon"></i>' + t.leaves[lf].title + '</a></li>');
 			var extSplit = t.leaves[lf].url.split('.');
 			if (extSplit.length == 1 || extSplit[extSplit.length -1] == "html") 
 				$mUL.append($li);
@@ -210,11 +210,11 @@ function getUrlParameter(name) {
 			var br = t.branches[brind];
 
 			if (br.index){
-				$newmA = $('<a class="reallink" href="' + br.index.absurl + '"><i class="icon"/>' + br.index.title + '</a>');
+				$newmA = $('<a class="reallink" href="' + br.index.absurl + '"><i class="icon"></i>' + br.index.title + '</a>');
 			}
 			else{
 				var title = br.title || br.key;
-				$newmA = $('<a class="nolink" href="#"><i class="icon"/>'+ title +'</a>');
+				$newmA = $('<a class="nolink" href="#"><i class="icon"></i>'+ title +'</a>');
 			}
 			$newmUl = $('<ul class="menu vertical nested"></ul>');
 			$newmLi.append($newmA);
