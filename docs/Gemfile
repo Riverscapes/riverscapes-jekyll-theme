@@ -1,3 +1,6 @@
+# A note about this GEM file:
+# This gemfile is only to help you run `bundle exec jekyll serve` on your
+# local machine. It is not used in any way by the build system
 # frozen_string_literal: true
 
 source "https://rubygems.org"
