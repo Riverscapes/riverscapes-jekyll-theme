@@ -84,6 +84,6 @@ AppRedirects:
 # Here is how we retrieve the remote theme. Changes to this remote theme will show up after you 
 # push the repo with your /docs folder
 # remote_theme: Riverscapes/riverscapes-jekyll-theme@dev FOR DEBUGGING ONLY
-remote_theme: Riverscapes/riverscapes-jekyll-theme
+remote_theme: Riverscapes/riverscapes-jekyll-theme@dev
 plugins:
   - jekyll-remote-theme
