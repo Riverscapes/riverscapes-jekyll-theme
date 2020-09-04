@@ -43,9 +43,9 @@ settings:
     active: true
     onHome: false
   # Options for the sidebar menu      
-  sideMenu:
-    homeItem: true
-    startExpanded: false
+  # sideMenu:
+  #   homeItem: true
+  #   startExpanded: false
   # Arbitrary multi-level topbar menu
   # IF you don't need this just comment out everything below
   # ----------------------------------
