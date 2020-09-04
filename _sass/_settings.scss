@@ -61,7 +61,7 @@
 //  56. Xy Grid
 
 
-@import 'foundation-sites/util/util';
+@import '../node_modules/foundation-sites/scss/util/util';
 
 // 1. Global
 // ---------
@@ -905,7 +905,7 @@ $xy-block-grid-max: 8;
 
 
 // NOW we say which bits of Foundation we want to load
-@import 'foundation-sites/foundation';
+@import '../node_modules/foundation-sites/scss/foundation';
 // @import 'motion-ui';
 
 @include foundation-global-styles;
