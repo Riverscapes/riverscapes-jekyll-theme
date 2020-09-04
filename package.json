@@ -1,15 +1,15 @@
 {
-  "name": "web_riverscapes",
-  "version": "1.0.0",
+  "name": "riverscapes-jekyll-theme",
+  "version": "1.1.0",
   "description": "The riverscapes theme",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "font-awesome": "4.7.0",
-    "foundation-sites": "6.6.1",
-    "jquery": "3.5.0",
-    "motion-ui": "1.2.3",
-    "what-input": "5.2.6"
+    "foundation-sites": "6.6.3",
+    "jquery": "3.5.1",
+    "motion-ui": "2.0.3",
+    "what-input": "5.2.10"
   },
   "scripts": {
     "build": "script/build.sh",

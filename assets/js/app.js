@@ -186,6 +186,7 @@ function getUrlParameter(name) {
 	 * @return {[type]}
 	 */
 	function accordionize(t, $mUL) {
+		if (!SiteSettings.sideMenu) return
 		// The first time we have to build the ul
 		if (!$mUL) {
 			$mUL = $('<ul id="topmenu" class="vertical menu accordion-menu hide" data-accordion-menu data-submenu-toggle="true"></ul>');
@@ -243,6 +244,7 @@ function getUrlParameter(name) {
 	 * @param {any} $sidebar 
 	 */
 	function expandCurentAccordion($sidebar) {
+		if (!$sidebar) return
 		$menuEl = $sidebar.find("[href='"+window.location.pathname+"']");
 		$menuEl.addClass('menuActive');
 
@@ -280,7 +282,7 @@ function getUrlParameter(name) {
 })
 	
 	// Bind our buttons to menu actions
-	if (SiteSettings.sideMenu.startExpanded){
+	if (SiteSettings.sideMenu && SiteSettings.sideMenu.startExpanded){
 		$sidebarnav.foundation('showAll');
 	}
 	$('#menuCtls #expand').click(function(){
