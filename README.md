@@ -13,3 +13,7 @@ This is the main template for `/docs` folders in Riverscapes. Think of it as the
 See Jekyll docs regarding Gem themes.
 
 ## Deploying this theme
+
+## Notes
+
+We ignore the `yarn.lock` file because it seems to cause security warnings in other themes. 
