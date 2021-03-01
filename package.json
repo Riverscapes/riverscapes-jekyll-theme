@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "font-awesome": "4.7.0",
+    "@fortawesome/fontawesome-free": "5.15.2",
     "foundation-sites": "6.6.3",
     "jquery": "3.5.1",
     "motion-ui": "2.0.3",
