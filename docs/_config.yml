@@ -57,7 +57,7 @@ settings:
     - title: "Riverscapes Consortium"
       url: http://riverscapes.xyz
     - title: "Tools"
-      url: http://riverscapes.xyz/rc-tools.html
+      url: https://riverscapes.xyz/Tools/
     - title: "Data"
       url: https://data.riverscapes.xyz
     - title: "Maps"
