@@ -1,3 +1,9 @@
+# ⚠️ DEPPRECARED!!!!
+
+We use docusaurus now.
+
+https://github.com/Riverscapes/riverscapes-docusaurus-theme
+
 # Site Template for Riverscapes Docs folders
 
 This is the main template for `/docs` folders in Riverscapes. Think of it as the central theme repository where bugs get fixed. 
