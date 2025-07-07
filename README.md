@@ -1,4 +1,4 @@
-# ⚠️ DEPPRECARED!!!!
+# ⚠️ DEPPRECATED!!!!
 
 We use docusaurus now.
 
